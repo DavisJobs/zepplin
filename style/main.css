@@ -1,67 +1,501 @@
+/*Global*/
 * {
-    margin: 0;
-    padding: 0;
+    box-sizing: border-box;
 }
 
-.container  {
-    width: 100%;
-    max-width: 960px;
-    margin: auto;
+html {
+    font-size: 62.5%;
 }
-/*TODO: global*/
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.3rem;
+    color: white;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Lato', sans-serif;
+}
+
 h1 {
-    font-family:'Lato', sans-serif;;
+
+}
+
+h2 {
+    font-size: 3.2rem;
+}
+
+h3 {
+    font-size: 2.6rem;
 }
 
 a {
-    color: #fff;
     text-decoration: none;
+    color: inherit;
 }
-/*TODO: Header*/
+
+/*
+Layout
+*/
+.container {
+    max-width: 960px;
+    width: 100%;
+    margin: auto;
+}
+
+/*label*/
+.label {
+    color: black;
+    background: white;
+    display: inline-block;
+    align-self: flex-end;
+    padding: 0.5rem;
+    border-radius: 8px;
+}
+.active {
+    background: #fff;
+    color: #000;
+    padding: 9px;
+    border-radius: 34px;
+}
+/*btn-social*/
+.btn-social {
+    width: 2.6rem;
+    height: 2.6rem;
+    border: 2px solid white;
+    display: inline-block;
+    text-align: center;
+    line-height: 2.4rem;
+    border-radius: 100%;
+}
+
+.btn-social-fb:hover {
+    border-color: #4267b2;
+    color: #4267b2;
+}
+
+.btn-social-tw:hover {
+    border-color: #1ca1f2;
+    color: #1ca1f2;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.btn-category a {
+    color: #fff;
+    background: #5c3667;
+    padding: 4px 6px;
+    border-radius: 20px;
+    font-size: 13px;
+}
+
+.j-content {
+    justify-content: space-between;
+}
+
+.relative {
+    position: relative;
+}
+
+.btn {
+    text-align: center;
+    font-size: 18px;
+}
+.btn button{
+    color: #7b3fb6;
+    padding: 5px 38px;
+    border-radius: 33px;
+    border-color: #7b3fb6;
+    background-color:#fff;
+    font-weight: bold;
+}
+ 
+ 
+span {
+    font-weight: bold;
+}
+time {
+    color: #4d4d4d;
+}
+/*HEADER*/
 header {
     background-color: #62346f;
 }
 
+header .logo {
+    font-size: 4.2rem;
+    font-weight: bold;
+    margin-right: 8.8rem;
+}
+
 header .container {
-    height: 100px;
+    height: 10rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-header .container .logo {
-    font-size: 42px;
-    text-transform: uppercase;
-    color: #fff;
-}
-
-header .container .left {
+header .header-left {
     display: flex;
     align-items: center;
 }
 
-header .left nav {
-    margin-left: 88px;
-}
-
-header nav ul {
+header .list-share {
     display: flex;
 }
 
-header nav ul li {
-    margin-left: 35px;
+header .list-share li {
+    margin-left: 2.0rem;
 }
 
-header nav ul li a {
+header .list-share .icon-nav {
+    font-size: 19px;
+}
+/*TODO: SUBMENU*/
+header .sub-menu  {
+    background-color: #3a1045;
+    padding: 1.4rem;
+}
+header .sub-menu .wrap-submenu {
+    max-width: 960px;
+    width: 100%;
+    margin: auto;
+}
+header .sub-menu .wrap-submenu ul {
+    display: flex;
+}
+header .sub-menu .wrap-submenu ul li {
+    margin-left: 20px;
+}
+header .sub-menu .wrap-submenu ul li a {
+    font-size: 13px;
+}
+header .sub-menu .wrap-submenu span {
+    background: #fff;
+    color: #000;
+    padding: 5px 8px;
+    border-radius: 100%;
+}
+/*nav-main*/
+.nav-main ul {
+    display: flex;
+}
+
+.nav-main li {
+    margin-right: 4.0rem;
+}
+
+/*coverpage*/
+.coverpage {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px;
+}
+
+.coverpage .articles {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+/*Articles*/
+.post {
+    position: relative;
+}
+
+.post .text {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2rem 2rem 3.8rem;
+    background: rgba(0,0,0,.5);
+}
+
+.post .time-social {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.post .time-social ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+.post .time-social li {
+    margin-left: 12px;
+}
+
+.post h3 {
+    margin-bottom: 2.0rem;
+}
+
+/*post-one*/
+.post-one h2 {
+    display: inline-block;
+    align-self: flex-start;
+}
+
+.post-one h2::after {
+    content: "";
+    width: 50%;
+    height: 0.8rem;
+    background: white;
+    border-radius: 6px; 
+    display: block;
+    margin-top: 0.8rem;
+}
+
+.post-one h3 {
+    padding-right: 3rem;
+    line-height: 3.2rem;
+}
+
+/*post-two*/
+.post-two h3 {
+    font-size: 2rem;
+    line-height: 2.4rem;
+}
+
+.post-two .text {
+    padding: 0.8rem;
+}
+
+.post-two .time-social {
+    display: block;
+}
+
+.post-two .time-social ul {
+    justify-content: flex-end;
+    margin-top: 0.8rem;
+}
+
+/*post-three*/
+.post-three h3 {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    line-height: 2rem;
+    padding-right: 7rem;
+    margin: 0;
+}
+
+.post-three .text {
+    padding: 0.8rem;
+    justify-content: flex-end;
+}
+
+.post-three .label {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+}
+
+
+/*main*/
+main {
+    padding: 2rem 0;
+}
+
+/*TODO: Present*/
+.present .d-flex {
+    display: flex;
+}
+.present .d-flex .f-wrap {
+    display: flex;
+    flex-wrap: wrap;
+}
+.present .d-flex .f-wrap .post {
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+.present h2 {
+    color: #7b3fb6;
+}
+.present .f-wrap  {
+    margin-top: 14px;
+}
+ 
+/*TODO:Aside*/
+.present aside {
+    display: flex;
+    flex-direction: column;
+}
+.present aside h2 {
+    margin-top: -32px;
+    margin-bottom: 14px;
+    color: #009d78;
+}
+
+.present aside .post {
+    margin-bottom: 20px;
+}
+/*TODO: Buttons */
+.present .d-flex .f-wrap .btn   {
+    margin: auto;
+}
+.present .d-flex .btn button {
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    
+}
+.present aside .btn {
+    margin: auto;
+    border-radius: 33px;
+    background-color: #fff;
+}
+.present aside .btn button {
+    color: #009d78;
+    padding: 5px 38px;
+    border-radius: 33px;
+    border-color: #009d78;
+    background-color:#fff;
+}
+
+
+/*TODO: Footer*/
+footer {
+    background: #62346f;
+}
+footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2.3rem 0;
+}
+footer h2 {
+    font-size: 28px;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+}
+footer p {
+    font-size: 13px;
+    font-family: 'Lato', sans-serif;
+}
+
+/*TODO: Politica*/
+.category article {
+    width: 93.5%;
+}
+.category h2 {
+    color: #000;
+    font-weight: bold;
+    padding-bottom: 19px;
+}
+.category h4 {
     font-size: 16px;
+    color: #000;
+    font-weight: bold;    
+    padding-top: 4px;
+    padding-bottom: 6px;
+}
+.category .politica  time {
+    color: #4d4d4d;
+}
+.category p {
+    color: #161616;
+    font-family: Arial;
+    padding-bottom: 30px;    
+}
+ 
+.category .texto {
+    align-self: flex-end;
+    padding: 2rem;
+}
+.category .cont-texto {
+    justify-content: space-between;
+}
+.category .politica .time-social li {
+    margin-left: 1.3rem;
+}
+.category .politica .time-social a {
+    color: #000;
+    border: 1px solid #000;
+    border-radius: 50%;
+}
+/*TODO: btn category*/
+ 
+
+/*TODO: aside*/
+ 
+.category .aside h2 {
+    color: #009d78;
+}
+.category .aside .article-2 {
+    padding-top: 21px;
+}
+.category .aside .time-social {
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 9px;
+}
+.category .aside .time-social time {
+    color: #4d4d4d;
+}
+.category .aside .time-social button {
+    background: #ff0505;
+    color: #fff;
+    border-radius: 20px;
+    padding: 2px 7px;
+    border: none;
+}
+.category .aside .article-2 button {
+    color: #fff;
+    background: #ff00e3;
+}
+.category .aside h4 {
+    padding: 19px 0;
+    border-bottom: solid 2px #bdbdbd;
+}
+.category .aside article {
+    width: 31rem;
+}
+.category .aside .publicidad {
+    padding-top: 30px;
+    padding-bottom: 5rem;
+}
+/*TODO: Detail*/
+.detail article {
+    width: 97.5%;
+}
+.detail figure {
+    margin-bottom: 20px;
+}
+ .detail figure img{
+    position: relative;
 }
 
-/*TODO: Social*/
-
-header .social ul {
-    display: flex;
+.detail .detail-p {
+    position: absolute;
+    background: rgba(0,0,0,.5);
+    padding: 0;
+    /*top: 0;*/
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
 }
-
-header .social li {
-
+.detail .detail-p p {
+    color: #fff;
+    padding: 11px;
+}
+.detail .padding p {
+    padding-bottom: 13px;
+    line-height: 1.38;
+}
+.detail .btn {
+    padding-top: 4rem;
 }
