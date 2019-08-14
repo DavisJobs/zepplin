@@ -197,6 +197,7 @@ header .sub-menu .wrap-submenu span {
     display: flex;
     justify-content: space-between;
     margin-bottom: 24px;
+    position: relative;
 }
 
 .coverpage .articles {
@@ -499,3 +500,6 @@ footer p {
 .detail .btn {
     padding-top: 4rem;
 }
+
+/*TODO: Responsive*/
+ 
