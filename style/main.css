@@ -122,7 +122,7 @@ span {
     font-weight: bold;
 }
 time {
-    color: #4d4d4d;
+    color: #fff;
 }
 /*HEADER*/
 header {
@@ -199,7 +199,12 @@ header .sub-menu .wrap-submenu span {
     margin-bottom: 24px;
     position: relative;
 }
-
+.coverpage .caja-padre {
+    display: flex;
+}
+.coverpage .caja-padre .post-two {
+    margin-left: 20px;
+}
 .coverpage .articles {
     display: flex;
     flex-direction: column;
@@ -314,7 +319,7 @@ main {
 .present .d-flex {
     display: flex;
 }
-.present .d-flex .f-wrap {
+.present .d-flex .f-wrap .content-wrap {
     display: flex;
     flex-wrap: wrap;
 }
@@ -500,6 +505,231 @@ footer p {
 .detail .btn {
     padding-top: 4rem;
 }
-
+.social-redes {
+    display: none;
+}
 /*TODO: Responsive*/
+@media(max-width:974px) {
+    main {
+        padding: 1rem 1.8rem;
+    }
+    .post-three figure img {
+        width: 280px;
+    }
+    .present aside .btn {
+        margin: inherit;
+        
+}
+@media (max-width:960px) {
+    header {
+       padding: 0 1.1rem;
+    }
+      
+    main {
+        padding: 1rem 1.8rem;
+    }
+    .coverpage {
+        flex-direction: column;
+    }
+    .caja-padre {
+        display: flex;
+        width: 100%;
+    }
+    .coverpage .articles {
+        width: 100%;
+        flex-direction: unset;
+        
+    }
+    .post-three {
+        width: 32%;
+        margin-top: 2.1rem;
+    }
+    .post-three figure img {
+        width: 100%;
+        height: 100px;
+    }
+    .post-one {
+        width: 575px;
+        height: 416px;
+    }
+    .post-one img {
+        width: 100%;
+        height: 416px;
+    }
+    .post-two {
+        width: 403px;
+        height: 416px;
+    }
+    .post-two img {
+        width: 100%;
+        height: 416px;
+    }
+    .post-three .text h3 {
+        font-size: 13px;
+    }
+    .post-three .text time,h4 {
+        font-size: 11px;
+    }
+    /*TODO: [Present]*/
+    .present .post-three {
+        width: 280px;
+    }
+    /*TODO:[Aside]*/
+     aside .post-three {
+         width: 280px;
+     }
+     .present aside .btn {
+         margin: none;
+     }
+}
+@media (max-width:932px){
+    main {
+        padding: 1rem 2rem;
+    }
+    .present .post-three {
+        width: 400px;
+        height: 180px;
+    }
+    .present .post-three figure img {
+        width: 100%;
+        height: 180px;
+    }
+    footer {
+        padding: 0 1rem;
+    }
+}
+@media (max-width:865px){
+    main {
+        padding: 1rem 3rem;
+    }
+    .present .post-three {
+        width: 350px;
+    }
+}
+@media (max-width:840px) {
+    .coverpage .articles{
+        flex-direction: column;   
+    }
+    .coverpage .articles  .post-three {
+        width: 100%;
+    }
+    .coverpage .articles .post-three .text h3 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width:768px) {
+   
+    header .container {
+        padding: 0 1.8rem;
+    }
+    .nav-main {
+        display: none;
+    }
+    .post-one {
+       width: 575px;
+    }
+    .post-two {
+        width: 148px;
+    }
+    .present .post-three {
+        width: 290px;
+    }
+    
+    .present .post-three figure img {
+        width: 100%;
+    }    
+    footer {
+        padding: 0 3rem;
+    }
+    
+}
+
+@media (max-width:660px) {
+    main {
+    padding: 1rem 0.8rem;
+    }
+    .coverpage .caja-padre {
+    flex-direction: column;
+    }
+   .present .container {
+     flex-direction: column;
+   }
+   .present .post-three {
+    width: 100%;
+   }
+   .present .post-three .text h3 {
+    font-size: 2rem;
+   }
+   .present .d-flex .f-wrap .post {
+    margin-right: 0px;
+    margin-bottom: 0px;
+}
+.coverpage .caja-padre {
+    width: 100%;
+}
+ .coverpage .caja-padre .post.post-one {
+     width: 100%;
+ }
+ .coverpage .caja-padre .post-two {
+     width: 100%;
+     margin-left: 0px;
+     margin-top: 10px;
+ } 
+ .present .d-flex .f-wrap .btn {
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+ }
+}
+
+/*TODO: detail*/
+
+@media (max-width:962px) {
+    .sub-menu {
+        width: 100%;
+        
+    }
+    /*TODO: Social f-t*/
+    .sub-menu .wrap-submenu{
+        display: none;
+    }
+    header .social-redes {
+        display: block;
+    }
+    .social-redes ul {
+        display: flex;
+        justify-content: flex-end;
+    }
+    .social-redes ul li {
+        margin-left: 30px;
+    }
+    .social-redes ul li i {
+        margin-right: 7px;
+    }
+    .category {
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+    .aside {
+        width: 100%;
+    }
+    .aside .cont-aside article {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+    .category article {
+        width: 100%;
+        margin-top: 15px;
+    }
+    .detail .btn {
+        margin-bottom: 20px;
+    }
+    .detail figure img {
+        width: 100%;
+    }
+     
+}
+
  
